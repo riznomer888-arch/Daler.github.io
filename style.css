@@ -1,0 +1,155 @@
+/* Сброс базовых отступов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0f172a; /* Темный стильный фон */
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+/* Шапка сайта */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #1e293b;
+    border-bottom: 1px solid #334155;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #38bdf8; /* Голубой акцент */
+}
+
+.navbar nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #38bdf8;
+}
+
+/* Главный баннер */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+    background: radial-gradient(circle at top, #1e1b4b 0%, #0f172a 100%);
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+/* Кнопка */
+.main-btn {
+    background-color: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.main-btn:hover {
+    background-color: #7dd3fc;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
+}
+
+/* Сетка проектов (Grid) */
+.projects-section {
+    padding: 80px 10%;
+}
+
+.projects-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Авто-подгон колонок */
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #1e293b;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.project-card p {
+    color: #94a3b8;
+    font-size: 15px;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #0b0f19;
+    color: #64748b;
+    font-size: 14px;
+    border-top: 1px solid #1e293b;
+}
+
+/* Мобильная адаптивность (для экранов меньше 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .navbar nav a {
+        margin: 0 10px;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+}
